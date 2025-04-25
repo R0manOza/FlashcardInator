@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Flashcardinator",
+    "version": "1.0.0",
+    "description": "Practice flashcards via a browser extension.",
+    "icons": {
+      "16": "icons/house-solid.png",
+      "48": "icons/house-solid.png",
+      "128": "icons/house-solid.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icons/house-solid.png",
+        "24": "icons/house-solid.png", 
+        "32": "icons/house-solid.png"
+      },
+      "default_title": "Flashcardinator Practice",
+      "default_popup": "popup.html" 
+    },
+    "permissions": [], 
+    "host_permissions": [
+      "http://localhost:3001/*", 
+      "http://127.0.0.1:3001/*" 
+    ]
+  }
