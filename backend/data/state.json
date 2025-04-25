@@ -1,0 +1,194 @@
+{
+  "currentDay": 4,
+  "buckets": [
+    {
+      "bucketNumber": 0,
+      "cards": []
+    },
+    {
+      "bucketNumber": 1,
+      "cards": []
+    },
+    {
+      "bucketNumber": 2,
+      "cards": [
+        {
+          "front": "comer",
+          "back": "to eat",
+          "hint": "Action",
+          "tags": [
+            "verb",
+            "spanish"
+          ]
+        },
+        {
+          "front": "cool",
+          "back": "stuff",
+          "hint": "my",
+          "tags": [
+            "guy"
+          ]
+        }
+      ]
+    },
+    {
+      "bucketNumber": 3,
+      "cards": [
+        {
+          "front": "der Apfel",
+          "back": "the apple",
+          "hint": "Fruit",
+          "tags": [
+            "noun",
+            "german"
+          ]
+        }
+      ]
+    },
+    {
+      "bucketNumber": 4,
+      "cards": [
+        {
+          "front": "merci",
+          "back": "thank you",
+          "hint": "Gratitude",
+          "tags": [
+            "phrase",
+            "french"
+          ]
+        },
+        {
+          "front": "neko",
+          "back": "cat",
+          "hint": "Animal",
+          "tags": [
+            "noun",
+            "japanese"
+          ]
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "cardFront": "der Apfel",
+      "cardBack": "the apple",
+      "timestamp": 1745610284578,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1745610285865,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "merci",
+      "cardBack": "thank you",
+      "timestamp": 1745610287044,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "neko",
+      "cardBack": "cat",
+      "timestamp": 1745610289169,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1745610735921,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "der Apfel",
+      "cardBack": "the apple",
+      "timestamp": 1745610737009,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1745610738164,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "merci",
+      "cardBack": "thank you",
+      "timestamp": 1745610739237,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "neko",
+      "cardBack": "cat",
+      "timestamp": 1745610740692,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1745610743743,
+      "difficulty": 1,
+      "previousBucket": 1,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "der Apfel",
+      "cardBack": "the apple",
+      "timestamp": 1745610744442,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1745610745359,
+      "difficulty": 1,
+      "previousBucket": 2,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "merci",
+      "cardBack": "thank you",
+      "timestamp": 1745610746003,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "neko",
+      "cardBack": "cat",
+      "timestamp": 1745610746834,
+      "difficulty": 1,
+      "previousBucket": 4,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1745610750627,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    }
+  ]
+}
