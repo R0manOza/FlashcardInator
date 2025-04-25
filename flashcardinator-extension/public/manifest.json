@@ -9,16 +9,19 @@
       "128": "icons/house-solid.png"
     },
     "action": {
+        "default_title": "Create Flashcard", 
+        "default_popup": "popup.html", 
       "default_icon": {
         "16": "icons/house-solid.png",
         "24": "icons/house-solid.png", 
         "32": "icons/house-solid.png"
-      },
-      "default_title": "Flashcardinator Practice",
-      "default_popup": "popup.html" 
+      }
+      
     },
     "permissions": [
         "tabs"
+        
+
     ], 
     
     "host_permissions": [
