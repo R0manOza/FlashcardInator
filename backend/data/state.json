@@ -3,7 +3,22 @@
   "buckets": [
     {
       "bucketNumber": 0,
-      "cards": []
+      "cards": [
+        {
+          "front": "kai biwi xar",
+          "back": "good boy",
+          "hint": "what bro is ",
+          "tags": [
+            "truth "
+          ]
+        },
+        {
+          "front": "test1",
+          "back": "asd",
+          "hint": "",
+          "tags": []
+        }
+      ]
     },
     {
       "bucketNumber": 1,
@@ -101,14 +116,6 @@
       "difficulty": 2,
       "previousBucket": 2,
       "newBucket": 3
-    },
-    {
-      "cardFront": "cool",
-      "cardBack": "stuff",
-      "timestamp": 1745610735921,
-      "difficulty": 2,
-      "previousBucket": 0,
-      "newBucket": 1
     },
     {
       "cardFront": "der Apfel",

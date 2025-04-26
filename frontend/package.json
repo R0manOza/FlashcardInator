@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tensorflow-models/hand-pose-detection": "^2.0.1",
-    "@tensorflow/tfjs": "^4.22.0",
-    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
-    "@tensorflow/tfjs-core": "^4.22.0",
+    "@tensorflow-models/handpose": "^0.0.7",
+    "@tensorflow/tfjs": "^3.21.0",
+    "@tensorflow/tfjs-backend-cpu": "^3.7.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.7.0",
+    "@tensorflow/tfjs-converter": "^3.7.0",
+    "@tensorflow/tfjs-core": "^3.7.0",
     "axios": "^1.8.4",
+    "fingerpose": "^0.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
