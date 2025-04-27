@@ -290,6 +290,7 @@ function createOpenPalmGesture() {
   return openPalm;
 }
 
+//Want to know what this gesture does? Check it yourself ;)
 function createMiddleFingerGesture() {
   const middleFinger = new fp.GestureDescription("middle_finger");
   middleFinger.addCurl(fp.Finger.Middle, fp.FingerCurl.NoCurl, 1.0);
