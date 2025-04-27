@@ -23,7 +23,7 @@ const PracticeView: React.FC = () => {
   const [detectedGestureInfo, setDetectedGestureInfo] = useState<string | null>(
     null
   );
-  const [videoKey] = useState(0); // to force re-render the video element
+  const [videoKey] = useState(0);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const modelRef = useRef<handpose.HandPose | null>(null);
