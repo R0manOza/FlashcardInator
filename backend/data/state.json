@@ -8,9 +8,7 @@
           "front": "kai biwi xar",
           "back": "good boy",
           "hint": "what bro is ",
-          "tags": [
-            "truth "
-          ]
+          "tags": ["truth "]
         },
         {
           "front": "test1",
@@ -31,18 +29,13 @@
           "front": "comer",
           "back": "to eat",
           "hint": "Action",
-          "tags": [
-            "verb",
-            "spanish"
-          ]
+          "tags": ["verb", "spanish"]
         },
         {
           "front": "cool",
           "back": "stuff",
           "hint": "my",
-          "tags": [
-            "guy"
-          ]
+          "tags": ["guy"]
         }
       ]
     },
@@ -53,10 +46,7 @@
           "front": "der Apfel",
           "back": "the apple",
           "hint": "Fruit",
-          "tags": [
-            "noun",
-            "german"
-          ]
+          "tags": ["noun", "german"]
         }
       ]
     },
@@ -67,19 +57,13 @@
           "front": "merci",
           "back": "thank you",
           "hint": "Gratitude",
-          "tags": [
-            "phrase",
-            "french"
-          ]
+          "tags": ["phrase", "french"]
         },
         {
           "front": "neko",
           "back": "cat",
           "hint": "Animal",
-          "tags": [
-            "noun",
-            "japanese"
-          ]
+          "tags": ["noun", "japanese"]
         }
       ]
     }

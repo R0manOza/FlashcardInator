@@ -169,27 +169,11 @@ const PracticeView: React.FC = () => {
   };
 
   const handleNextDay = async () => {
-    setIsLoading(true);
-    setError(null);
     try {
-      const response = await advanceDay();
-      setDay(response.currentDay);
-
-      const session = await fetchPracticeCards();
-      setPracticeCards(session.cards);
-      setSessionFinished(session.cards.length === 0);
-      setCurrentCardIndex(0);
-      setShowBack(false);
-      setHint(null);
-      setDetectedGestureInfo(null);
-
-      await startVideo(); // 🆕 restart video
-      setVideoKey((prev) => prev + 1); // 🆕 trigger new detection
-      setDetecting(false);
+      await advanceDay();
+      window.location.reload(); // 🧹 full page reload
     } catch {
       setError("Failed to advance day");
-    } finally {
-      setIsLoading(false);
     }
   };
 
