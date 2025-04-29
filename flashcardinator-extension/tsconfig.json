@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      
+      "target": "ES2020", 
+      "module": "ESNext", 
+      "lib": ["ES2020", "DOM"],
+      "outDir": "./dist", 
+      "rootDir": "./src",
+      "moduleResolution": "node", 
+  
+      /* Strictness & Checks */
+      "strict": true,
+      "esModuleInterop": true, 
+      "skipLibCheck": true, 
+      "forceConsistentCasingInFileNames": true,
+  
+    
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

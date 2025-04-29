@@ -14,10 +14,12 @@
         "24": "icons/house-solid.png", 
         "32": "icons/house-solid.png"
       },
-      "default_title": "Flashcardinator Practice",
-      "default_popup": "popup.html" 
+      "default_title": "Flashcardinator Practice"
+       
     },
     "permissions": [
+        "tabs",
+        "contextMenus",
         "tabs"
     ], 
     "host_permissions": [
