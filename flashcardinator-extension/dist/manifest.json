@@ -1,29 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "Flashcardinator",
-    "version": "1.0.0",
-    "description": "Practice flashcards via a browser extension.",
-    "icons": {
-      "16": "icons/house-solid.png",
-      "48": "icons/house-solid.png",
-      "128": "icons/house-solid.png"
+  "manifest_version": 3,
+  "name": "Flashcardinator",
+  "version": "1.0.0",
+  "description": "Practice flashcards via a browser extension.",
+  "icons": {
+    "16": "icons/house-solid.png", 
+    "48": "icons/house-solid.png",
+    "128": "icons/house-solid.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/house-solid.png", 
+      "24": "icons/house-solid.png",
+      "32": "icons/house-solid.png"
     },
-    "action": {
-      "default_icon": {
-        "16": "icons/house-solid.png",
-        "24": "icons/house-solid.png", 
-        "32": "icons/house-solid.png"
-      },
-      "default_title": "Flashcardinator Practice"
-       
-    },
-    "permissions": [
-        "tabs",
-        "contextMenus",
-        "tabs"
-    ], 
-    "host_permissions": [
-      "http://localhost:3001/*", 
-      "http://127.0.0.1:3001/*" 
-    ]
+    "default_title": "Create Flashcard"
+    
+  },
+  "permissions": [
+      "tabs",
+      "contextMenus", 
+      "storage"       
+  ],
+  "host_permissions": [
+    "http://localhost:3001/*",
+    "http://127.0.0.1:3001/*"
+  ],
+  "background": {           
+    "service_worker": "background.js"
   }
+}

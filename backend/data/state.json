@@ -8,11 +8,31 @@
           "front": "kai biwi xar",
           "back": "good boy",
           "hint": "what bro is ",
-          "tags": ["truth "]
+          "tags": [
+            "truth "
+          ]
         },
         {
           "front": "test1",
           "back": "asd",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "hello",
+          "back": "asda",
+          "hint": "asd",
+          "tags": []
+        },
+        {
+          "front": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+          "back": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "Magic (supernatural)",
+          "back": "most commonly refers to: Magic (supernatural)",
           "hint": "",
           "tags": []
         }
@@ -29,13 +49,18 @@
           "front": "comer",
           "back": "to eat",
           "hint": "Action",
-          "tags": ["verb", "spanish"]
+          "tags": [
+            "verb",
+            "spanish"
+          ]
         },
         {
           "front": "cool",
           "back": "stuff",
           "hint": "my",
-          "tags": ["guy"]
+          "tags": [
+            "guy"
+          ]
         }
       ]
     },
@@ -46,7 +71,10 @@
           "front": "der Apfel",
           "back": "the apple",
           "hint": "Fruit",
-          "tags": ["noun", "german"]
+          "tags": [
+            "noun",
+            "german"
+          ]
         }
       ]
     },
@@ -57,13 +85,19 @@
           "front": "merci",
           "back": "thank you",
           "hint": "Gratitude",
-          "tags": ["phrase", "french"]
+          "tags": [
+            "phrase",
+            "french"
+          ]
         },
         {
           "front": "neko",
           "back": "cat",
           "hint": "Animal",
-          "tags": ["noun", "japanese"]
+          "tags": [
+            "noun",
+            "japanese"
+          ]
         }
       ]
     }

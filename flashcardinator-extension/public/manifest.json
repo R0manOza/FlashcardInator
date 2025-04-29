@@ -10,7 +10,7 @@
     },
     "action": {
         "default_title": "Create Flashcard", 
-        "default_popup": "popup.html", 
+        
       "default_icon": {
         "16": "icons/house-solid.png",
         "24": "icons/house-solid.png", 
@@ -19,6 +19,8 @@
       
     },
     "permissions": [
+        "tabs",
+        "ContextMenus",
         "tabs"
         
 

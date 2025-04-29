@@ -1,5 +1,7 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Get elements for the form
+  // --- Get form elements 
   const form = document.getElementById('createCardForm');
   const frontInput = document.getElementById('frontText');
   const backInput = document.getElementById('backText');
@@ -7,106 +9,111 @@ document.addEventListener('DOMContentLoaded', function() {
   const tagsInput = document.getElementById('tags');
   const saveButton = document.getElementById('saveButton');
   const statusMessage = document.getElementById('statusMessage');
-
-  // Get element for the open practice page button
   const openPracticeButton = document.getElementById('openPracticePageBtn');
 
-  // Backend API endpoint URL
-  const CREATE_CARD_URL = 'http://localhost:3001/api/createCard'; // Your backend endpoint
+  console.log("Create Popup: DOM Loaded. Checking storage..."); // Log for debugging
 
-  // --- Form Submission Logic ---
-  if (form) {
-    form.addEventListener('submit', async function(event) { // Make the handler async
-      event.preventDefault(); // Prevent default form submission
+  // --- Check storage for pending text ON LOAD (Fallback/Initial Fill) ---
+  chrome.storage.local.get(['pendingFront', 'pendingBack'], (result) => {
+    if (chrome.runtime.lastError) {
+        console.error("Create Popup: Error getting storage:", chrome.runtime.lastError.message);
+        
+    } else {
+        console.log("Create Popup: Initial storage state:", result);
+        const keysToRemove = [];
 
-      // Clear previous status messages
-      statusMessage.textContent = '';
-      statusMessage.className = '';
-
-      // --- Get values ---
-      const frontText = frontInput.value.trim();
-      const backText = backInput.value.trim();
-      const hintText = hintInput.value.trim();
-      const tagsString = tagsInput.value.trim();
-
-      // --- Basic Validation ---
-      if (!frontText || !backText) {
-        statusMessage.textContent = 'Front and Back fields are required.';
-        statusMessage.className = 'error';
-        return; // Stop submission
-      }
-
-      // --- Prepare Data ---
-      const tags = tagsString ? tagsString.split(',').map(tag => tag.trim()).filter(tag => tag) : [];
-
-      // *** Match the backend's expected body structure ***
-      // Your backend '/api/createCard' expects: { front, back, hint, tag }
-      // Note: backend expects 'tag' (singular) but takes an array
-      const cardData = {
-        front: frontText, // Use 'front' to match backend
-        back: backText,   // Use 'back' to match backend
-        hint: hintText,   // Use 'hint' to match backend
-        tag: tags         // Use 'tag' (singular key) with the array value
-      };
-
-      // --- Send to Backend API using fetch ---
-      statusMessage.textContent = 'Saving...';
-      statusMessage.className = '';
-      if(saveButton) saveButton.disabled = true; // Disable button while saving
-
-      try {
-        const response = await fetch(CREATE_CARD_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(cardData),
-        });
-
-        // Re-enable button after fetch completes
-        if(saveButton) saveButton.disabled = false;
-
-        // Check if the request was successful (status code 2xx)
-        if (response.ok) {
-          const result = await response.json(); // Assuming backend sends JSON confirmation
-          statusMessage.textContent = result.message || 'Card saved successfully!'; // Use message from backend if available
-          statusMessage.className = 'success';
-          if(form) form.reset(); // Clear form
-          // Optional: close popup after a delay
-          // setTimeout(() => window.close(), 1500);
-        } else {
-          // Handle HTTP errors (like 400, 409, 500)
-          let errorMessage = `Error: ${response.status} ${response.statusText}`;
-          try {
-            // Try to get more specific error message from backend response body
-            const errorResult = await response.json();
-            errorMessage = `Error: ${errorResult.error || errorMessage}`;
-          } catch (e) {
-            // Ignore if response body is not JSON
-          }
-          statusMessage.textContent = errorMessage;
-          statusMessage.className = 'error';
+        if (result.pendingFront && frontInput) {
+          console.log("Create Popup: Initial fill - Found pendingFront:", result.pendingFront);
+          frontInput.value = result.pendingFront;
+          keysToRemove.push('pendingFront');
         }
-      } catch (error) {
-        // Handle network errors (fetch couldn't connect)
-        console.error("Network error:", error);
-        if(saveButton) saveButton.disabled = false; // Re-enable button
-        statusMessage.textContent = 'Network error. Is the backend server running?';
-        statusMessage.className = 'error';
+        if (result.pendingBack && backInput) {
+          console.log("Create Popup: Initial fill - Found pendingBack:", result.pendingBack);
+          backInput.value = result.pendingBack;
+          keysToRemove.push('pendingBack');
+        }
+
+        // --- Immediately clear used storage items ---
+        if (keysToRemove.length > 0) {
+          chrome.storage.local.remove(keysToRemove, () => {
+            if (chrome.runtime.lastError) {
+              console.error("Create Popup: Error clearing storage on load:", chrome.runtime.lastError.message);
+            } else {
+              console.log("Create Popup: Cleared used keys from storage on load:", keysToRemove);
+            }
+          });
+        }
+    }
+  }); // End of chrome.storage.local.get on load
+
+  // --- ADD Message Listener for updates ---
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    console.log("Create Popup: Received message:", message);
+    if (message.type === "PREFILL_FIELD" && message.payload) {
+      const { field, text } = message.payload;
+      if (field === 'front' && frontInput) {
+        console.log("Create Popup: Pre-filling front via message:", text);
+        frontInput.value = text;
+        // Clear the corresponding storage item as message confirms receipt
+        chrome.storage.local.remove('pendingFront');
+      } else if (field === 'back' && backInput) {
+        console.log("Create Popup: Pre-filling back via message:", text);
+        backInput.value = text;
+        // Clear the corresponding storage item as message confirms receipt
+        chrome.storage.local.remove('pendingBack');
       }
-    });
+    }
+    
+    return false; // Indicate synchronous response (or no response needed)
+  });
+
+  // --- Form Submission Logic (using fetch - NO CHANGE NEEDED HERE) ---
+  if (form && frontInput && backInput && hintInput && tagsInput && saveButton && statusMessage) {
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        // ... EXACT SAME fetch logic as the previous working version ...
+         statusMessage.textContent = ''; statusMessage.className = '';
+        const frontText = frontInput.value.trim();
+        const backText = backInput.value.trim();
+        if (!frontText || !backText) {
+            statusMessage.textContent = 'Front and Back fields are required.'; statusMessage.className = 'error'; return;
+        }
+        const hintText = hintInput.value.trim();
+        const tagsString = tagsInput.value.trim();
+        const tags = tagsString ? tagsString.split(',').map(tag => tag.trim()).filter(tag => tag) : [];
+        const cardData = { front: frontText, back: backText, hint: hintText, tag: tags };
+        const CREATE_CARD_URL = 'http://localhost:3001/api/createCard';
+        statusMessage.textContent = 'Saving...'; saveButton.disabled = true;
+        try {
+            const response = await fetch(CREATE_CARD_URL, {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(cardData),
+            });
+            saveButton.disabled = false;
+            if (response.ok) {
+                const result = await response.json();
+                statusMessage.textContent = result.message || 'Card saved successfully!'; statusMessage.className = 'success';
+                form.reset();
+            } else {
+                let errorMessage = `Error: ${response.status} ${response.statusText}`;
+                try { const errorResult = await response.json(); errorMessage = `Error: ${errorResult.error || errorMessage}`; } catch (e) {}
+                statusMessage.textContent = errorMessage; statusMessage.className = 'error';
+            }
+        } catch (error) {
+            console.error("Network error:", error); saveButton.disabled = false;
+            statusMessage.textContent = 'Network error. Is the backend server running?'; statusMessage.className = 'error';
+        }
+    }); // End form submit listener
   } else {
-      console.error("Form with ID 'createCardForm' not found.");
+      console.error("Create Popup: One or more form elements not found for submit listener.");
   }
 
-  // --- Open Practice Page Button Logic (Remains the same) ---
+  // --- Open Practice Page Button Logic ---
   if (openPracticeButton) {
     openPracticeButton.addEventListener('click', function() {
       const practicePageUrl = chrome.runtime.getURL('practice_page.html');
       chrome.tabs.create({ url: practicePageUrl });
     });
-  } else {
-      console.error("Button with ID 'openPracticePageBtn' not found.");
   }
 
 }); // End DOMContentLoaded
