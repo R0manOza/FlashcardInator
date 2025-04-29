@@ -15,8 +15,14 @@ function setupContextMenus() {
     id: "addAsBack",
     title: "Use Selection as Back",
     contexts: ["selection"]
+  });//FOR LATER TOMMORROW WE GON ADD SOME AI SHINANIGANS HERE 
+  chrome.contextMenus.create({
+    id: "AI help",
+    title: "use ai to create flashcard",
+    contexts: ["selection"]
   });
   console.log("Background: Context menus setup/verified.");
+
 }
 
 // --- Event Listeners ---

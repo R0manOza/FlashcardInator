@@ -1,4 +1,5 @@
 "use strict";
+// nika don't forget this shit is the meat and potaotes this is what needs the most testing !
 const CREATE_POPUP_URL = chrome.runtime.getURL('create_popup.html');
 let createPopupId = null; // Track window ID (will be imperfect due to service worker lifecycle)
 // --- Function to Setup Context Menus ---
@@ -12,6 +13,11 @@ function setupContextMenus() {
     chrome.contextMenus.create({
         id: "addAsBack",
         title: "Use Selection as Back",
+        contexts: ["selection"]
+    }); //FOR LATER TOMMORROW WE GON ADD SOME AI SHINANIGANS HERE 
+    chrome.contextMenus.create({
+        id: "AI help",
+        title: "use ai to create flashcard",
         contexts: ["selection"]
     });
     console.log("Background: Context menus setup/verified.");
