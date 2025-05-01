@@ -14,7 +14,8 @@
       "24": "icons/house-solid.png",
       "32": "icons/house-solid.png"
     },
-    "default_title": "Create Flashcard"
+    "default_title": "Create Flashcard",
+    "default_popup": "small_popup.html"
     
   },
   "permissions": [

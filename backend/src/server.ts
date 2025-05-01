@@ -3,6 +3,7 @@ import cors from "cors";
 import * as logic from "./logic/algorithm";
 import { Flashcard,AnswerDifficulty } from "./logic/flashcards";
 import * as state from "./state";
+import { getAllCardsFlat } from "./state";
 import { UpdateRequest,ProgressStats,PracticeRecord } from "./types";
 
 const app=express();
@@ -149,3 +150,25 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
 
+//also adding a helper function here for quick sessions 
+function shuffleArray<T>(array: T[]): T[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+  }
+  app.get("/api/quick-practice", (req: Request, res: Response) => {
+    try {
+      const allCards = getAllCardsFlat();
+      const shuffledCards = shuffleArray(allCards); // Use your shuffle function
+      const quickPracticeCards = shuffledCards.slice(0, 10);
+  
+      console.log(`Serving ${quickPracticeCards.length} cards for quick practice.`);
+      res.json({ cards: quickPracticeCards }); // Send as { cards: [...] }
+  
+    } catch (error) {
+      console.error("Error getting quick practice cards:", error);
+      res.status(500).json({ message: "Error fetching quick practice cards" });
+    }
+  });

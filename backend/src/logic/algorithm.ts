@@ -169,7 +169,7 @@ export function getHint(card: Flashcard): string {
  * @returns statistics about learning progress.
  * @spec.requires history is valid representation of history defined in this function with flashcard as key and number of correct and incorrect answers on that flashcard as value.
  */
-export function computeProgress(
+export function computeProgress(//i complitly forgot about compute progress... what a useless function 
   buckets: BucketMap,
   history: PracticeRecord []
 ):ProgressStats{
