@@ -254,7 +254,10 @@
 .newCardButton:hover:not(:disabled) { background-color: #4cb87f; }
 
 .retryButton { background-color: #ffcc00; color: #333; }
-.retryButton:hover(not(:disabled)) { background-color: #e6b800; }
+.retryButton:hover:not(:disabled) {
+  background-color: #e6b800;
+}
+
 
 /* --- Mode Chooser and Answer Buttons retain their rules below unchanged */
 
