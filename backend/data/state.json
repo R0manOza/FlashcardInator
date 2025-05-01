@@ -1,8 +1,24 @@
 {
-  "currentDay": 5,
+  "currentDay": 32,
   "buckets": [
     {
       "bucketNumber": 0,
+      "cards": []
+    },
+    {
+      "bucketNumber": 1,
+      "cards": []
+    },
+    {
+      "bucketNumber": 2,
+      "cards": []
+    },
+    {
+      "bucketNumber": 3,
+      "cards": []
+    },
+    {
+      "bucketNumber": 4,
       "cards": [
         {
           "front": "kai biwi xar",
@@ -13,81 +29,31 @@
           ]
         },
         {
-          "front": "hello",
-          "back": "asda",
-          "hint": "asd",
-          "tags": []
-        },
-        {
-          "front": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
-          "back": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
-          "hint": "",
-          "tags": []
-        },
-        {
-          "front": "cool",
-          "back": "stuff",
-          "hint": "my",
-          "tags": [
-            "guy"
-          ]
-        }
-      ]
-    },
-    {
-      "bucketNumber": 1,
-      "cards": [
-        {
-          "front": "test1",
-          "back": "asd",
-          "hint": "",
-          "tags": []
-        },
-        {
-          "front": "Magic (supernatural)",
-          "back": "most commonly refers to: Magic (supernatural)",
-          "hint": "",
-          "tags": []
-        },
-        {
           "front": "sadad",
           "back": "ghayh",
           "hint": "fasd",
           "tags": [
             "pidar"
           ]
-        }
-      ]
-    },
-    {
-      "bucketNumber": 2,
-      "cards": []
-    },
-    {
-      "bucketNumber": 3,
-      "cards": [
+        },
         {
-          "front": "der Apfel",
-          "back": "the apple",
-          "hint": "Fruit",
+          "front": "dassda",
+          "back": "asd",
+          "hint": "asd",
           "tags": [
-            "noun",
-            "german"
+            "asd"
           ]
         },
         {
-          "front": "comer",
-          "back": "to eat",
-          "hint": "Action",
-          "tags": [
-            "verb",
-            "spanish"
-          ]
+          "front": "hello",
+          "back": "asda",
+          "hint": "asd",
+          "tags": []
         }
       ]
     },
     {
-      "bucketNumber": 4,
+      "bucketNumber": 5,
       "cards": [
         {
           "front": "merci",
@@ -106,6 +72,50 @@
             "noun",
             "japanese"
           ]
+        },
+        {
+          "front": "der Apfel",
+          "back": "the apple",
+          "hint": "Fruit",
+          "tags": [
+            "noun",
+            "german"
+          ]
+        },
+        {
+          "front": "comer",
+          "back": "to eat",
+          "hint": "Action",
+          "tags": [
+            "verb",
+            "spanish"
+          ]
+        },
+        {
+          "front": "test1",
+          "back": "asd",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+          "back": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "cool",
+          "back": "stuff",
+          "hint": "my",
+          "tags": [
+            "guy"
+          ]
+        },
+        {
+          "front": "Magic (supernatural)",
+          "back": "most commonly refers to: Magic (supernatural)",
+          "hint": "",
+          "tags": []
         }
       ]
     }
@@ -286,6 +296,598 @@
       "difficulty": 0,
       "previousBucket": 2,
       "newBucket": 0
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746107152041,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746107171567,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746107748059,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746107751007,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746107752697,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746107755011,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746107757771,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746107779960,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "test1",
+      "cardBack": "asd",
+      "timestamp": 1746107782481,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746107809042,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746107810801,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746107813383,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746107815539,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746107816917,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746107818338,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746108073061,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746108076341,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746108472578,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746108475411,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746108479170,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746108481716,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746108490345,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746108693452,
+      "difficulty": 1,
+      "previousBucket": 1,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746108720084,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746108728746,
+      "difficulty": 1,
+      "previousBucket": 1,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746108731021,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746108733748,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746108740760,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "test1",
+      "cardBack": "asd",
+      "timestamp": 1746109849598,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746109854367,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746109857115,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "der Apfel",
+      "cardBack": "the apple",
+      "timestamp": 1746109858834,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1746109861903,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746109868278,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746109870387,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746109871943,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746109879412,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746109882009,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746109884609,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746138399364,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746138416359,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746138420527,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746138433952,
+      "difficulty": 0,
+      "previousBucket": 1,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746138440635,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746138445185,
+      "difficulty": 1,
+      "previousBucket": 2,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746139318649,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746139329893,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746139334859,
+      "difficulty": 1,
+      "previousBucket": 2,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140036950,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140040525,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746140044508,
+      "difficulty": 0,
+      "previousBucket": 2,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746140099608,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140106462,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140110296,
+      "difficulty": 1,
+      "previousBucket": 2,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746140208128,
+      "difficulty": 2,
+      "previousBucket": 1,
+      "newBucket": 2
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746140211031,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140229704,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746140383816,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "test1",
+      "cardBack": "asd",
+      "timestamp": 1746140388576,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746140388779,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746140389608,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746140389945,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746140390375,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746140391572,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "dassda",
+      "cardBack": "asd",
+      "timestamp": 1746140392419,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "merci",
+      "cardBack": "thank you",
+      "timestamp": 1746140392561,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "neko",
+      "cardBack": "cat",
+      "timestamp": 1746140393011,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "der Apfel",
+      "cardBack": "the apple",
+      "timestamp": 1746140393462,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1746140393901,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746141718467,
+      "difficulty": 2,
+      "previousBucket": 3,
+      "newBucket": 4
+    },
+    {
+      "cardFront": "test1",
+      "cardBack": "asd",
+      "timestamp": 1746141728140,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746141736656,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746141738835,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746141740124,
+      "difficulty": 2,
+      "previousBucket": 4,
+      "newBucket": 5
     }
   ]
 }

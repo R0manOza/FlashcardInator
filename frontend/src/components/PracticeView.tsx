@@ -9,6 +9,9 @@ import {
 import * as handpose from "@tensorflow-models/handpose";
 import * as fp from "fingerpose";
 import * as tf from "@tensorflow/tfjs";
+import "./PracticeView.css";
+import nebula from "../assets/nebula.jpg";
+import stars  from "../assets/stars.png";
 
 const PracticeView: React.FC = () => {
   const [practiceCards, setPracticeCards] = useState<Flashcard[]>([]);
@@ -194,25 +197,78 @@ const PracticeView: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
   if (sessionFinished)
     return (
-      <div>
-        <p>🎉 No more cards today!</p>
-        <button onClick={handleNextDay}>Next Day</button>
+      <div
+        className="container"
+        style={{
+          background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${nebula}) no-repeat center center fixed`,
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="sessionCompleteText">
+          🎉 No more cards today!
+          <button className="nextDayButton" onClick={handleNextDay}>
+            Next Day
+          </button>
+        </div>
       </div>
     );
 
+  
+
+
+
+
   return (
-    <div>
-      <h2>
+    <div
+      className="container"
+      style={{
+      background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${nebula}) no-repeat center center fixed`,
+      backgroundSize: "cover",
+     }}
+   >
+    {/* starfield */}
+<div
+  style={{
+    position: "absolute",
+    top: 0, left: 0,
+    width: "200%", height: "200%",
+    backgroundImage: `url(${stars})`,
+    backgroundRepeat: "repeat",
+    opacity: 0.3,
+    animation: "starMove 60s linear infinite",
+    pointerEvents: "none",
+    zIndex: 0,
+  }}
+/>
+{/* pulse glow */}
+<div
+  style={{
+    position: "absolute",
+    top: 0, left: 0,
+    width: "100%", height: "100%",
+    background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 70%)",
+    animation: "pulseGlow 8s ease-in-out infinite",
+    pointerEvents: "none",
+    zIndex: 1,
+  }}
+/>
+
+      <h2 className="header">
         Day {day} - Card {currentCardIndex + 1} of {practiceCards.length}
       </h2>
 
-      <video
-        key={videoKey}
-        ref={videoRef}
-        autoPlay
-        playsInline
-        style={{ width: "320px", height: "240px", transform: "scaleX(-1)" }}
-      />
+      <div className="cameraContainer">
+  <video
+    key={videoKey}
+    ref={videoRef}
+    autoPlay
+    playsInline
+    className="videoFeed"
+  />
+  <canvas className="landmarkCanvas" />
+  {detecting && <div className="detectionIndicator" />}
+</div>
+
 
       <div>
         <p>
@@ -231,13 +287,66 @@ const PracticeView: React.FC = () => {
         </p>
       )}
 
-      {!showBack && (
-        <>
-          <button onClick={handleGetHint}>Get Hint</button>
-          {hint && <p>Hint: {hint}</p>}
-          <button onClick={handleShowAnswer}>Show Answer</button>
-        </>
-      )}
+      {/* ─── Flashcard front/back (click to flip) ─── */}
+<div className="cardContainer">
+  <div
+    className={`card ${showBack ? "cardFlipped" : ""}`}
+    onClick={() => {
+      setShowBack(prev => {
+        const nowShowing = !prev;
+        if (nowShowing) setDetecting(true); // start gesture detect once flipped
+        return nowShowing;
+      });
+    }}
+  >
+    <div className="cardFace front">
+      {/* front text + optional hint */}
+      {currentCard.front}
+      {hint && <p className="hintText">Hint: {hint}</p>}
+    </div>
+    <div className="cardFace back">
+      {/* back text */}
+      {currentCard.back}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+      {/* old logic with show answer button instead of flippy button */}
+      {/* {!showBack && (
+        <div className="controlsArea">
+          <button className="practiceButton hintButton" onClick={handleGetHint}>Get Hint</button>
+          {hint && <p className="hintText">Hint: {hint}</p>}
+          <button className="practiceButton showAnswerButton" onClick={handleShowAnswer}>Show Answer</button>
+        </div>
+      )} */}
+      {showBack && (
+  <div className="answerButtonsContainer">
+    <button
+      className="practiceButton wrongButton"
+      onClick={() => handleAnswer(AnswerDifficulty.Wrong, "Chose Wrong")}
+    >
+      ❌ Wrong
+    </button>
+    <button
+      className="practiceButton hardButton"
+      onClick={() => handleAnswer(AnswerDifficulty.Hard, "Chose Hard")}
+    >
+      😬 Hard
+    </button>
+    <button
+      className="practiceButton easyButton"
+      onClick={() => handleAnswer(AnswerDifficulty.Easy, "Chose Easy")}
+    >
+      ✅ Easy
+    </button>
+  </div>
+)}
+      
     </div>
   );
 };
