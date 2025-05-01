@@ -1,5 +1,5 @@
 {
-  "currentDay": 4,
+  "currentDay": 5,
   "buckets": [
     {
       "bucketNumber": 0,
@@ -11,12 +11,6 @@
           "tags": [
             "truth "
           ]
-        },
-        {
-          "front": "test1",
-          "back": "asd",
-          "hint": "",
-          "tags": []
         },
         {
           "front": "hello",
@@ -31,30 +25,6 @@
           "tags": []
         },
         {
-          "front": "Magic (supernatural)",
-          "back": "most commonly refers to: Magic (supernatural)",
-          "hint": "",
-          "tags": []
-        }
-      ]
-    },
-    {
-      "bucketNumber": 1,
-      "cards": []
-    },
-    {
-      "bucketNumber": 2,
-      "cards": [
-        {
-          "front": "comer",
-          "back": "to eat",
-          "hint": "Action",
-          "tags": [
-            "verb",
-            "spanish"
-          ]
-        },
-        {
           "front": "cool",
           "back": "stuff",
           "hint": "my",
@@ -63,6 +33,35 @@
           ]
         }
       ]
+    },
+    {
+      "bucketNumber": 1,
+      "cards": [
+        {
+          "front": "test1",
+          "back": "asd",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "Magic (supernatural)",
+          "back": "most commonly refers to: Magic (supernatural)",
+          "hint": "",
+          "tags": []
+        },
+        {
+          "front": "sadad",
+          "back": "ghayh",
+          "hint": "fasd",
+          "tags": [
+            "pidar"
+          ]
+        }
+      ]
+    },
+    {
+      "bucketNumber": 2,
+      "cards": []
     },
     {
       "bucketNumber": 3,
@@ -74,6 +73,15 @@
           "tags": [
             "noun",
             "german"
+          ]
+        },
+        {
+          "front": "comer",
+          "back": "to eat",
+          "hint": "Action",
+          "tags": [
+            "verb",
+            "spanish"
           ]
         }
       ]
@@ -214,6 +222,70 @@
       "difficulty": 2,
       "previousBucket": 1,
       "newBucket": 2
+    },
+    {
+      "cardFront": "kai biwi xar",
+      "cardBack": "good boy",
+      "timestamp": 1746105888718,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "test1",
+      "cardBack": "asd",
+      "timestamp": 1746105894344,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "hello",
+      "cardBack": "asda",
+      "timestamp": 1746105899790,
+      "difficulty": 0,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic, sometimes spelled magick, is the application of beliefs, rituals or actions employed in the belief that they can manipulate natural or supernatural ...",
+      "cardBack": "Magic: The Gathering https://magic.wizards.com › ... The official source for news and information on Magic: The Gathering, the world's premier trading card game, and MTG Arena.",
+      "timestamp": 1746105916857,
+      "difficulty": 1,
+      "previousBucket": 0,
+      "newBucket": 0
+    },
+    {
+      "cardFront": "Magic (supernatural)",
+      "cardBack": "most commonly refers to: Magic (supernatural)",
+      "timestamp": 1746105919615,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "sadad",
+      "cardBack": "ghayh",
+      "timestamp": 1746105922568,
+      "difficulty": 2,
+      "previousBucket": 0,
+      "newBucket": 1
+    },
+    {
+      "cardFront": "comer",
+      "cardBack": "to eat",
+      "timestamp": 1746105928163,
+      "difficulty": 2,
+      "previousBucket": 2,
+      "newBucket": 3
+    },
+    {
+      "cardFront": "cool",
+      "cardBack": "stuff",
+      "timestamp": 1746105932058,
+      "difficulty": 0,
+      "previousBucket": 2,
+      "newBucket": 0
     }
   ]
 }

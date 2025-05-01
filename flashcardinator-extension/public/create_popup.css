@@ -1,0 +1,211 @@
+/* ---------- 1. RETRO / COMIC FONTS ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bangers&display=swap");
+
+/* ---------- 2. COSMIC BACKGROUND ---------- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  /* maintain original width from inline style (350 px) */
+  box-sizing: border-box;
+  /* animated synth-wave gradient */
+  background: linear-gradient(135deg, #20006b 0%, #4500a4 25%, #7c00ff 55%, #ff008a 100%);
+  background-size: 300% 300%;
+  animation: bgShift 16s ease infinite;
+  /* pump the default text to white for contrast */
+  color: #ffffff;
+}
+
+/* animated gradient keyframes */
+@keyframes bgShift {
+  0%   { background-position: 0 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* ---------- 3. HEADER (NEON GLITCH) ---------- */
+h3 {
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 0 24px;
+  font-size: 15px;
+  position: relative;
+  color: #00fff7;
+  text-shadow: 0 0 4px #00fff7, 0 0 10px #00fff7;
+  user-select: none;
+}
+
+/* two coloured duplicates shifted to create a glitch */
+h3::before,
+h3::after {
+  content: "Create New Flashcard";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip-path: inset(0 0 50% 0);
+  mix-blend-mode: screen;
+}
+h3::before {
+  color: #ff1ead;
+  transform: translate(2px, -2px);
+  animation: glitchTop 2.5s infinite;
+}
+h3::after {
+  color: #00b3ff;
+  transform: translate(-2px, 2px);
+  animation: glitchBot 2.5s infinite;
+}
+
+@keyframes glitchTop {
+  0%, 5%   { clip-path: inset(0 0 60% 0); transform: translate(2px,-2px); }
+  6%, 12%  { clip-path: inset(0 0 25% 0); transform: translate(-3px,1px); }
+  13%, 45% { clip-path: inset(0 0 75% 0); transform: translate(3px,0); }
+  46%, 100%{ clip-path: inset(0 0 60% 0); transform: translate(2px,-2px); }
+}
+@keyframes glitchBot {
+  0%, 5%   { clip-path: inset(50% 0 0 0); transform: translate(-2px,2px); }
+  6%, 12%  { clip-path: inset(75% 0 0 0); transform: translate(2px,-1px); }
+  13%, 45% { clip-path: inset(25% 0 0 0); transform: translate(-3px,0); }
+  46%, 100%{ clip-path: inset(50% 0 0 0); transform: translate(-2px,2px); }
+}
+
+/* ---------- 4. FORM ELEMENTS ---------- */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "Bangers", cursive;
+  font-size: 15px;
+  color: #ffe600;
+}
+
+/* keep original % width but jazz it up */
+input[type="text"],
+textarea {
+  width: 96%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #dddddd;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ---------- 5. BUTTONS (LASER GRADIENTS) ---------- */
+button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+button:active {
+  transform: scale(0.96);
+}
+
+/* Save card: neon-green */
+#saveButton {
+  background: linear-gradient(135deg, #00ff9d 0%, #0ef9e2 100%);
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffb7 inset;
+}
+/* Practice page: blue-violet beam */
+#openPracticePageBtn {
+  background: linear-gradient(135deg, #4481ff 0%, #7116ff 100%);
+  box-shadow: 0 0 10px #5a6dff, 0 0 20px #574dff inset;
+}
+
+button:hover {
+  box-shadow: 0 0 14px 4px rgba(255, 255, 255, 0.45);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- 6. STATUS MESSAGE ---------- */
+#statusMessage {
+  margin-top: 12px;
+  min-height: 1.2em;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Bangers", cursive;
+  text-shadow: 0 0 5px currentColor;
+}
+.success {
+  color: #00e676;
+}
+.error {
+  color: #ff5b5b;
+}
+
+/* ---------- 7. DIVIDER ---------- */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 28px 0 18px;
+}
+
+/* ---------- 8. EXTRA DELIGHT (FLOATING SPARKLES) ---------- */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  top: -100vh;
+  left: -100vw;
+  width: 300vw;
+  height: 300vh;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.25) 0,
+      rgba(255, 255, 255, 0) 3%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.25) 0,
+      rgba(255, 255, 255, 0) 3%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0) 4%
+    );
+  background-size: 400px 400px;
+  animation: starDrift 50s linear infinite;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+@keyframes starDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50vw, -50vh, 0);
+  }
+}

@@ -116,4 +116,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  function boom(){
+    confetti({
+      particleCount: 160,
+      spread: 70,
+      origin: { y: 0.65 }
+    });
+  }
+  
+  // after DOM loads…
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const form   = document.getElementById('createCardForm');
+    const status = document.getElementById('statusMessage');
+  
+    form.addEventListener('submit', async e=>{
+      e.preventDefault();
+      // … your existing fetch logic …
+      // pretend success:
+      status.textContent = 'Saved! 💥 Knowledge +1';
+      status.className   = 'success';
+      boom();                // launch confetti
+      new Audio(chrome.runtime.getURL('sfx/ta-da.mp3')).play()
+        .catch(()=>{/* ignore autoplay block */});
+      form.reset();
+    });
+  });
+
 }); // End DOMContentLoaded
