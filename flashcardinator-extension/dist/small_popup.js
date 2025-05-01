@@ -14,10 +14,22 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.error("Button with ID 'goToPractice' not found in small_popup.html .");
     }
-    if(quickpracticeButton) {//give me a sec gotta add some logic into backend 
+    if(quickpracticeButton) {
+      quickpracticeButton.addEventListener('click', function() {
+        const quickPracticeUrl = chrome.runtime.getURL('quick_practice.html');
+        const windowWidth = 380; 
+        const windowHeight = 500;
+  
+        chrome.windows.create({
+          url: quickPracticeUrl,
+          type: 'popup',
+          width: windowWidth,
+          height: windowHeight
+        });
+        window.close();
       
-    }
-    else{
+      })
+    }else{
       console.error("Button with ID 'goToquickpractice' not found in small_popup.html .");
     }
   });

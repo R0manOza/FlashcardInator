@@ -185,3 +185,13 @@ export function createCard(front: string, back: string, hint: string, tag: Reado
   return newCard;
 }
 
+//added a function to have quick sessions which do not change the state of the program 
+export function getAllCardsFlat(): Flashcard[] {
+  const allCards: Flashcard[] = [];
+  for (const bucketSet of currentBuckets.values()) {
+    for (const card of bucketSet) {
+      allCards.push(card);
+    }
+  }
+  return allCards;
+}

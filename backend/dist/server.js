@@ -41,6 +41,7 @@ const cors_1 = __importDefault(require("cors"));
 const logic = __importStar(require("./logic/algorithm"));
 const flashcards_1 = require("./logic/flashcards");
 const state = __importStar(require("./state"));
+const state_1 = require("./state");
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3001;
 app.use((0, cors_1.default)());
@@ -170,4 +171,25 @@ app.post("/api/createCard", (req, res) => {
 });
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+});
+//also adding a helper function here for quick sessions 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+app.get("/api/quick-practice", (req, res) => {
+    try {
+        const allCards = (0, state_1.getAllCardsFlat)();
+        const shuffledCards = shuffleArray(allCards); // Use your shuffle function
+        const quickPracticeCards = shuffledCards.slice(0, 10);
+        console.log(`Serving ${quickPracticeCards.length} cards for quick practice.`);
+        res.json({ cards: quickPracticeCards }); // Send as { cards: [...] }
+    }
+    catch (error) {
+        console.error("Error getting quick practice cards:", error);
+        res.status(500).json({ message: "Error fetching quick practice cards" });
+    }
 });

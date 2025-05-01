@@ -12,6 +12,7 @@ exports.setBucket = setBucket;
 exports.addHistoryRecord = addHistoryRecord;
 exports.incrementDay = incrementDay;
 exports.createCard = createCard;
+exports.getAllCardsFlat = getAllCardsFlat;
 const fs_1 = __importDefault(require("fs")); // Use the core 'fs' module
 const path_1 = __importDefault(require("path"));
 const flashcards_1 = require("./logic/flashcards"); // Adjust path if needed relative to 'src'
@@ -162,4 +163,14 @@ function createCard(front, back, hint, tag) {
     currentBuckets.set(0, bucketZero); // Put the updated Set back into the Map
     saveStateSync(); // Save after modifying
     return newCard;
+}
+//added a function to have quick sessions which do not change the state of the program 
+function getAllCardsFlat() {
+    const allCards = [];
+    for (const bucketSet of currentBuckets.values()) {
+        for (const card of bucketSet) {
+            allCards.push(card);
+        }
+    }
+    return allCards;
 }
