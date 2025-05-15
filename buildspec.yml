@@ -3,44 +3,25 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18 # Or your desired Node.js version
+      nodejs: '16'
+  pre_build:
     commands:
-      - echo "Entered install phase..."
-      - cd backend # IMPORTANT: Navigate to your backend directory
-      - npm ci # Clean install, uses package-lock.json
- 
-  # pre_build:
-  #   commands:
-  #     - echo "Entered pre_build phase..."
-  #     # - npm run lint # Optional: Run linters
-  #     - npm run test # Optional but highly recommended: Run unit/integration tests
- 
+      - cd backend
+      - echo Installing source NPM dependencies...
+      - npm install
   build:
     commands:
-      - echo "Entered build phase..."
-      - npm run build # This should compile TypeScript to JavaScript (e.g., into a 'dist' folder)
- 
+      - echo Build started on `date`
+      - echo Running build...
+      - npm run build
   post_build:
     commands:
-      - echo "Entered post_build phase..."
-      - echo "Zipping deployment package..."
-      # We are already in packages/backend. We need to create a zip file
-      # that Elastic Beanstalk can consume. EB expects package.json at the root of the zip.
-      # The 'dist' folder, package.json, package-lock.json, and Procfile (if used) are essential.
-      # node_modules will be installed by EB on the instance.
- 
-      # Create a temporary directory for staging the artifact
-      - mkdir ../../eb_artifact_staging
-      - cp -R dist/ ../../eb_artifact_staging/dist
-      - cp package.json ../../eb_artifact_staging/
-      - cp package-lock.json ../../eb_artifact_staging/
-      # Optional: If you use a Procfile for EB
-      # - cp Procfile ../../eb_artifact_staging/
-      # Optional: If you have .ebextensions
-      # - cp -R .ebextensions ../../eb_artifact_staging/
+      - cp -R node_modules/ dist/node_modules # nodejs needs this
+      - cp Procfile dist/Procfile # EBS needs this
+      - echo Build completed on `date`
  
 artifacts:
   files:
-    - '**/*' # All files from the staging directory
-  base-directory: 'eb_artifact_staging' # Path relative to the root of the source checkout (monorepo-root)
-  discard-paths: yes # Ensures the zip doesn't have the 'eb_artifact_staging' folder in it
+    - '**/*'
+  discard-paths: no
+  base-directory: dist
